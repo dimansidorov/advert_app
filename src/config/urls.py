@@ -17,6 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from advert.views import AdvertListAPIView, AdvertRetrieveAPIView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/advert-list/', AdvertListAPIView.as_view()),
+    path('api/advert/<int:pk>/', AdvertRetrieveAPIView.as_view()),
 ]
