@@ -19,6 +19,6 @@ services:
       - DB_USER=postgres_user
       - DB_PASSWORD=postgres_password
     command: >
-      sh -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+      sh -c "sleep 10 && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
     depends_on:
       - db
