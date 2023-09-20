@@ -8,12 +8,18 @@ class Category(models.Model):
     def __str__(self) -> str: 
         return self.name 
     
+    class Meta:
+        verbose_name_plural = 'Categories'
+    
     
 class City(models.Model): 
     name = models.CharField(max_length=50, null=False) 
     
     def __str__(self) -> str: 
         return self.name 
+    
+    class Meta:
+        verbose_name_plural = 'Cities'
     
     
 class Advert(models.Model): 
