@@ -6,13 +6,13 @@ from .models import Category, City, Advert
 class CategoryModelSerializer(ModelSerializer):
     class Meta:
         model = Category
-        fields = ('name', )
+        fields = '__all__'
 
 
 class CityModelSerializer(ModelSerializer):
     class Meta:
         model = City
-        fields = ('name', )
+        fields = '__all__'
 
 
 class AdvertModelSerializer(ModelSerializer):
